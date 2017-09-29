@@ -7,3 +7,39 @@ script:
   - bundle exec rake test
 notifications:
 email: false
+matrix:
+  fast_finish: true
+  include:
+  - rvm: '2.1'
+  - rvm: '2.3'
+  - rvm: '2.4'
+  - rvm: '2.4'
+    sudo: required
+    services: docker
+    env: RS_SET=centos-6-docker
+    script: bundle exec rake beaker
+  - rvm: '2.4'
+    sudo: required
+    services: docker
+    env: RS_SET=centos-7-docker
+    script: bundle exec rake beaker
+  - rvm: '2.4'
+    sudo: required
+    services: docker
+    env: RS_SET=ubuntu-14.04-docker
+    script: bundle exec rake beaker
+  - rvm: '2.4'
+    sudo: required
+    services: docker
+    env: RS_SET=ubuntu-16.04-docker
+    script: bundle exec rake beaker
+  - rvm: '2.4'
+    sudo: required
+    services: docker
+    env: RS_SET=debian-7-docker
+    script: bundle exec rake beaker
+  - rvm: '2.4'
+    sudo: required
+    services: docker
+    env: RS_SET=debian-8-docker
+script: bundle exec rake beaker
