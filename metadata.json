@@ -1,0 +1,40 @@
+{
+  "author": "Center of Information Technology COI.gov.pl (MC)",
+  "license": "Apache-2.0",
+  "name": "coi-flyway",
+  "project_page": "https://github.com/coi-gov-pl/puppet-flyway.git",
+  "source": "https://github.com/coi-gov-pl/puppet-flyway.git",
+  "summary": "Installs and manage flyway command line tool and gives defines to use database migrations",
+  "version": "0.1.0",
+  "operatingsystem_support": [
+    { "operatingsystem": "CentOS", "operatingsystemrelease": [ "6", "7" ] },
+    { "operatingsystem": "OracleLinux", "operatingsystemrelease": [ "6", "7" ] },
+    { "operatingsystem": "RedHat", "operatingsystemrelease": [ "6", "7" ] },
+    { "operatingsystem": "Ubuntu", "operatingsystemrelease": [ "14.04", "16.04" ] },
+    { "operatingsystem": "Debian", "operatingsystemrelease": [ "7", "8" ] }
+  ],
+  "requirements": [
+    {
+      "name": "puppet",
+      "version_requirement": ">=3.0.0 <5.0.0"
+    }
+  ],
+  "dependencies": [
+    {
+      "name": "puppetlabs/java",
+      "version_requirement": ">= 1.6.0 <2.0.0"
+    },
+    {
+      "name": "puppetlabs/stdlib",
+      "version_requirement": ">= 4.0.0 <6.0.0"
+    },
+    {
+      "name": "puppet/archive",
+      "version_requirement": ">= 1.3.0 <2.0.0"
+    },
+    {
+      "name": "coi/fetchtool",
+      "version_requirement": ">= 1.0.0 <2.0.0"
+    }
+  ]
+}
