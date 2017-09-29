@@ -13,9 +13,8 @@ matrix:
   - rvm: '2.1'
   - rvm: '2.3'
   - rvm: '2.4'
-  - rvm: '2.4'
     sudo: required
-    services: docker
+    services: vagrant
     env: RS_SET=centos-6-docker
     script: bundle exec rake beaker
   - rvm: '2.4'
