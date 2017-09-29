@@ -15,30 +15,30 @@ matrix:
   - rvm: '2.4'
     sudo: required
     services: vagrant
-    env: RS_SET=centos-6-docker
+    env: RS_SET=centos-6-vagrant
     script: bundle exec rake beaker
   - rvm: '2.4'
     sudo: required
     services: docker
-    env: RS_SET=centos-7-docker
+    env: RS_SET=centos-7-vagrant
     script: bundle exec rake beaker
   - rvm: '2.4'
     sudo: required
     services: docker
-    env: RS_SET=ubuntu-14.04-docker
+    env: RS_SET=ubuntu-14.04-vagrant
     script: bundle exec rake beaker
   - rvm: '2.4'
     sudo: required
     services: docker
-    env: RS_SET=ubuntu-16.04-docker
+    env: RS_SET=ubuntu-16.04-vagrant
     script: bundle exec rake beaker
   - rvm: '2.4'
     sudo: required
     services: docker
-    env: RS_SET=debian-7-docker
+    env: RS_SET=debian-7-vagrant
     script: bundle exec rake beaker
   - rvm: '2.4'
     sudo: required
     services: docker
-    env: RS_SET=debian-8-docker
+    env: RS_SET=debian-8-vagrant
 script: bundle exec rake beaker
